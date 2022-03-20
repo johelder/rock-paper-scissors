@@ -1,11 +1,24 @@
+import rockIcon from "../../../public/images/icon-rock.svg";
+import paperIcon from "../../../public/images/icon-paper.svg";
+import scissorsIcon from "../../../public/images/icon-scissors.svg";
+
+import * as S from './styles';
+
 interface IButtonProps {
-  type: string;
+  type: 'rock' | 'paper' | 'scissors';
 }
 
 export function Button({ type }: IButtonProps) {
+
+  const icons = {
+    rock: rockIcon,
+    paper: paperIcon,
+    scissors: scissorsIcon
+  }
+
   return (
-    <button>
-      teste
-    </button>
+    <S.Button>
+      <img src={icons[type]} />
+    </S.Button>
   );
 }
