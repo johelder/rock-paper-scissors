@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-white: rgb(255, 255, 255);
+  --primary-orange: hsl(39, 89%, 49%);
+  --primary-orange-light: hsl(40, 84%, 53%);
+  --primary-blue: hsl(230, 89%, 62%);
+  --primary-blue-light: hsl(230, 89%, 65%);
+  --primary-red: hsl(349, 71%, 52%);
+  --primary-red-light: hsl(349, 70%, 56%);
+  --primary-purple: hsl(261, 73%, 60%);
+  --primary-purple-light: hsl(261, 72%, 63%);
+  --primary-cyan: hsl(189, 59%, 53%);
+  --primary-cyan-light: hsl(189, 58%, 57%);
+
+  --dark-text: hsl(229, 25%, 31%);
+  --score-text: hsl(229, 64%, 46%);
+  --gray-outline: hsl(217, 16%, 45%);
+
+  --background: hsl(214, 47%, 23%);
+  --background-dark: hsl(237, 49%, 15%);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+
+  font-size: 62.5%;
+  font-family: "Barlow Semi Condensed", sans-serif;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--background),
+    var(--background-dark)
+  );
+}
