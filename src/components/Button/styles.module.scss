@@ -1,0 +1,38 @@
+$types: (
+  "paper": var(--primary-blue),
+  "rock": var(--primary-red),
+  "scissors": var(--primary-orange),
+);
+
+@each $buttonName, $type in $types {
+  .button-#{$buttonName} {
+    width: 10rem;
+    height: 10rem;
+
+    padding: 2rem;
+    margin: 0 1rem;
+
+    border-radius: 100%;
+    border: 1rem solid $type;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: flex-start;
+
+    z-index: 2;
+
+    img {
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      justify-self: flex-end;
+    }
+
+    &:last-child {
+      grid-column: 1/3;
+      justify-self: center;
+    }
+  }
+}

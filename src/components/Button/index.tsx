@@ -1,24 +1,25 @@
-import rockIcon from "../../../public/images/icon-rock.svg";
-import paperIcon from "../../../public/images/icon-paper.svg";
-import scissorsIcon from "../../../public/images/icon-scissors.svg";
+import { HTMLProps } from "react";
 
-import * as S from './styles';
+import rockIcon from "/images/icon-rock.svg";
+import paperIcon from "/images/icon-paper.svg";
+import scissorsIcon from "/images/icon-scissors.svg";
 
-interface IButtonProps {
-  type: 'rock' | 'paper' | 'scissors';
+import styles from "./styles.module.scss";
+
+interface IButtonProps extends HTMLProps<HTMLButtonElement> {
+  type: "rock" | "paper" | "scissors";
 }
 
-export function Button({ type }: IButtonProps) {
-
+export function Button({ type, ...rest }: IButtonProps) {
   const icons = {
     rock: rockIcon,
     paper: paperIcon,
-    scissors: scissorsIcon
-  }
+    scissors: scissorsIcon,
+  };
 
   return (
-    <S.Button>
+    <button className={styles[`button-${type}`]} {...rest}>
       <img src={icons[type]} />
-    </S.Button>
+    </button>
   );
 }
