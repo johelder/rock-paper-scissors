@@ -38,4 +38,10 @@ body {
     var(--background),
     var(--background-dark)
   );
+
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
 }
