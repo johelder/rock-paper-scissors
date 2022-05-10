@@ -7,7 +7,7 @@ import scissorsIcon from "/images/icon-scissors.svg";
 import styles from "./styles.module.scss";
 
 interface IButtonProps extends HTMLProps<HTMLButtonElement> {
-  type: "rock" | "paper" | "scissors";
+  type?: "rock" | "paper" | "scissors";
 }
 
 export function Button({ type, ...rest }: IButtonProps) {
@@ -19,7 +19,7 @@ export function Button({ type, ...rest }: IButtonProps) {
 
   return (
     <button className={styles[`button-${type}`]} {...rest}>
-      <img src={icons[type]} />
+      <img src={icons[type!]} />
     </button>
   );
 }
