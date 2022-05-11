@@ -1,4 +1,4 @@
-import logo from "/images/logo.svg";
+import logo from "../../../public/images/logo.svg";
 
 import styles from "./styles.module.scss";
 
@@ -9,7 +9,7 @@ interface IDisplayHeaderProps {
 export const DisplayHeader = ({ scoreCount }: IDisplayHeaderProps) => {
   return (
     <header className={styles.headerWrapper}>
-      <img src={logo} alt="Logo Rock, Paper, Scissors" />
+      <img src={logo} alt="Logo Rock, Paper, Scissors" data-testid="App Logo" />
 
       <div className={styles.scoreWrapper}>
         <span>score</span>
