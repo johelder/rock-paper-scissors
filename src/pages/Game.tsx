@@ -80,7 +80,7 @@ export default function Game() {
 
     if (winner === machine) {
       setGamerWinner({ winner: "machine", message: "YOU LOSE" });
-      setScoreCount((prevScore) => prevScore - 1);
+      setScoreCount((prevScore) => (prevScore === 0 ? 0 : prevScore - 1));
       return;
     }
 
