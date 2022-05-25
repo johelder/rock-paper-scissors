@@ -1,8 +1,8 @@
 import { HTMLProps } from "react";
 
-import rockIcon from "/images/icon-rock.svg";
-import paperIcon from "/images/icon-paper.svg";
-import scissorsIcon from "/images/icon-scissors.svg";
+import rockIcon from "../../../public/images/icon-rock.svg";
+import paperIcon from "../../../public/images/icon-paper.svg";
+import scissorsIcon from "../../../public/images/icon-scissors.svg";
 
 import styles from "./styles.module.scss";
 
@@ -18,8 +18,8 @@ export function Button({ type, ...rest }: IButtonProps) {
   };
 
   return (
-    <button className={styles[`button-${type}`]} {...rest}>
-      <img src={icons[type!]} />
+    <button className={styles[`button-${type}`]} {...rest} data-testid="Button">
+      <img src={icons[type!]} data-testid="button-icon" />
     </button>
   );
 }
