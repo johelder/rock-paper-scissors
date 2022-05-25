@@ -5,7 +5,6 @@ import { Button } from ".";
 describe("Button Component", () => {
   it("should render correctly paper button", () => {
     const { getByTestId } = render(<Button type="paper" />);
-
     const button = getByTestId("Button");
     const buttonIcon = getByTestId("button-icon");
 
@@ -15,7 +14,6 @@ describe("Button Component", () => {
 
   it("should render correctly rock button", () => {
     const { getByTestId } = render(<Button type="rock" />);
-
     const button = getByTestId("Button");
     const buttonIcon = getByTestId("button-icon");
 
@@ -25,7 +23,6 @@ describe("Button Component", () => {
 
   it("should render correctly scissors button", () => {
     const { getByTestId } = render(<Button type="scissors" />);
-
     const button = getByTestId("Button");
     const buttonIcon = getByTestId("button-icon");
 
