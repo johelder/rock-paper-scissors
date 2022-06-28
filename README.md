@@ -19,7 +19,7 @@
 ### Clone o repositório:
 
 ```bash
-https://github.com/johelder/rock-paper-scissors.git
+git clone https://github.com/johelder/rock-paper-scissors.git
 ```
 
 ### Instale as dependências do projeto:
